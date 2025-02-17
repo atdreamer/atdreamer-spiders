@@ -91,3 +91,13 @@ ROBOTSTXT_OBEY = True
 REQUEST_FINGERPRINTER_IMPLEMENTATION = "2.7"
 TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
 FEED_EXPORT_ENCODING = "utf-8"
+
+
+# settings.py
+
+# 设置 Scrapy 输出数据格式为 JSON
+FEED_FORMAT = 'json'
+FEED_URI = 'output.json'  # 设置输出文件路径（可以指定绝对路径或者相对路径）
+ITEM_PIPELINES = {
+   "nshishang.pipelines.NshishangPipeline": 300,
+}
